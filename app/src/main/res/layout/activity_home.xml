@@ -95,7 +95,7 @@
             android:textColor="@color/black" />
 
         <Button
-            android:id="@+id/buttonmenu4"
+            android:id="@+id/buttonmenumore"
             android:layout_width="wrap_content"
             android:layout_height="65dp"
             android:backgroundTint="#FFE484"

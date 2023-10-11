@@ -43,7 +43,7 @@
         android:layout_height="110dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toStartOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCall"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:srcCompat="@drawable/baseline_language_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

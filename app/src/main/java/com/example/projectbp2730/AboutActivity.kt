@@ -24,7 +24,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         //instance
-        val imgweb : ImageView = findViewById(R.id.imageViewglobe)
+        val imgweb : ImageView = findViewById(R.id.imageView4)
 
         //event
         imgweb.setOnClickListener {
@@ -35,7 +35,7 @@ class AboutActivity : AppCompatActivity() {
         }
 
         //instance
-        val location: ImageView = findViewById(R.id.imageViewloct)
+        val location: ImageView = findViewById(R.id.imageView5)
 
         //event
         location.setOnClickListener {

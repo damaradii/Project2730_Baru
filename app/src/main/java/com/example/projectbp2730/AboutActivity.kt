@@ -20,6 +20,32 @@ class AboutActivity : AppCompatActivity() {
                 number->
                 Intent(Intent.ACTION_DIAL,number)
             }
+            startActivity(callIntent)
+        }
+
+        //instance
+        val imgweb : ImageView = findViewById(R.id.imageViewglobe)
+
+        //event
+        imgweb.setOnClickListener {
+            val webIntent:Intent = Uri.parse("https://home.amikom.ac.id/").let { webpage->
+                Intent(Intent.ACTION_VIEW,webpage)
+            }
+            startActivity(webIntent)
+        }
+
+        //instance
+        val location: ImageView = findViewById(R.id.imageViewloct)
+
+        //event
+        location.setOnClickListener {
+            val loctIntentUri = Uri.parse("geo:47.6,-122,3?z=11")
+            val mapIntent = Intent(Intent.ACTION_VIEW,loctIntentUri)
+            mapIntent.setPackage("com.google.android.apps.maps")
+            if (mapIntent.  resolveActivity(packageManager) != null){
+                startActivity(mapIntent)
+            }
         }
     }
+
 }

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,4 +58,17 @@ class ScienceFragment : Fragment() {
                 }
             }
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val libuk=ListBuku.getDataBuku()
+
+        val recyclerView: RecyclerView =view.findViewById(R.id.recycscience)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        val adapter=AdapterHome(libuk)
+        recyclerView.adapter = adapter
+    }
+
 }

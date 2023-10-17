@@ -5,6 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Adapter
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,4 +60,19 @@ class FableFragment : Fragment() {
                 }
             }
     }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val listBuku=ListBuku.getDataBuku()
+
+        val recyclerView:RecyclerView=view.findViewById(R.id.recycfable)
+        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        val adapter=AdapterHome(listBuku)
+        recyclerView.adapter = adapter
+    }
+
+    
 }
